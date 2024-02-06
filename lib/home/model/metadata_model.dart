@@ -8,6 +8,7 @@ class Metadata {
     required this.pageContent,
     required this.txtPath,
   });
+  // gpt-3.5-turbo-instruct
 
   factory Metadata.fromJson(Map<String, dynamic> json) => Metadata(
         loc: json["loc"],

@@ -57,9 +57,9 @@ class ProviderLocator {
 
         final connection = await Connection.open(
           endpoint,
-          settings: ConnectionSettings(
+          settings: const ConnectionSettings(
             sslMode: SslMode.verifyFull,
-            connectTimeout: const Duration(milliseconds: 20000),
+            connectTimeout: Duration(milliseconds: 20000),
           ),
         );
 

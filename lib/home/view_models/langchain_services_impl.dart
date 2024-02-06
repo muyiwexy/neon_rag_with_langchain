@@ -129,7 +129,9 @@ class LangchainServicesImpl extends LangchainService {
       final concatPageContent = pdfMetadata.map((e) {
         return e.pageContent;
       }).join(' ');
+      print("...Started");
       final docChain = StuffDocumentsQAChain(llm: openAI);
+      print("...Started 2");
       final response = await docChain.call({
         'input_documents': [
           Document(pageContent: concatPageContent),
